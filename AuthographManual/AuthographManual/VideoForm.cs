@@ -25,7 +25,7 @@ namespace AuthographManual
             try
             {
                 InitializeVideo();
-                PlayVideo(path);
+                axWindowsMediaPlayer.URL = path;
             }
             catch (Exception ex)
             {
@@ -35,15 +35,14 @@ namespace AuthographManual
 
         private void InitializeVideo()
         {
-            if(!File.Exists(path))
+            if(!File.Exists(path) && Properties.Resources.manualvideo != null)
             {
                 File.WriteAllBytes(path, Properties.Resources.manualvideo);
             }
-        }
-
-        private void PlayVideo(string url)
-        {
-            axWindowsMediaPlayer.URL = url;
+            else
+            {
+                throw new Exception("Отсутствует видео.");
+            }
         }
     }
 }
