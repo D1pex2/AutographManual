@@ -13,7 +13,7 @@ namespace AuthographManual
 {
     public partial class VideoForm : ParentForm
     {
-        private string path = Environment.CurrentDirectory + "/manualvideo.mp4";
+        private string path = Environment.CurrentDirectory + "/Videos/manualvideo.mp4";
 
         public VideoForm()
         {
@@ -24,24 +24,18 @@ namespace AuthographManual
         {
             try
             {
-                InitializeVideo();
-                axWindowsMediaPlayer.URL = path;
+                if (File.Exists(path))
+                {
+                    axWindowsMediaPlayer.URL = path;
+                }
+                else
+                {
+                    throw new Exception("Видеоролик отсутствует.");
+                }
             }
             catch (Exception ex)
             {
                 ShowError(ex);
-            }
-        }
-
-        private void InitializeVideo()
-        {
-            if(!File.Exists(path) && Properties.Resources.manualvideo != null)
-            {
-                File.WriteAllBytes(path, Properties.Resources.manualvideo);
-            }
-            else
-            {
-                throw new Exception("Отсутствует видео.");
             }
         }
     }

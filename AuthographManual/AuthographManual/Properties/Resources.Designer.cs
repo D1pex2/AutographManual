@@ -79,15 +79,5 @@ namespace AuthographManual.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] manualvideo {
-            get {
-                object obj = ResourceManager.GetObject("manualvideo", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
     }
 }
