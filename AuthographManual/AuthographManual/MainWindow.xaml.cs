@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AuthographManual.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,23 @@ namespace AuthographManual
         public MainWindow()
         {
             InitializeComponent();
+            Navigate.MainFrame = MainFrame;
+            MainFrame.Navigate(new WelcomePage());
+        }
+
+        private void ManualButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ManualPage());
+        }
+
+        private void VideoButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new VideoPage());
+        }
+
+        private void TestButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new TestPage());
         }
     }
 }

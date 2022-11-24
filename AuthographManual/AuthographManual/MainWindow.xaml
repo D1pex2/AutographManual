@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AuthographManual"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Основы работы в Автограф" Icon="/Resources/icon.ico"
+        MinWidth="900" MinHeight="600">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Image Source="/Resources/autographLogo.png" Width="150"/>
+            <Button x:Name="ManualButton" Style="{StaticResource PrimaryButton}" Content="Руководство пользователя" Click="ManualButton_Click"/>
+            <Button x:Name="VideoButton" Style="{StaticResource PrimaryButton}" Content="Видеоролик по руководству" Click="VideoButton_Click"/>
+            <Button x:Name="TestButton" Style="{StaticResource PrimaryButton}" Content="Тестирование" Click="TestButton_Click"/>
+        </StackPanel>
+        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
