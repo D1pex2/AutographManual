@@ -8,9 +8,11 @@ namespace AuthographManual.Data
 {
     public class Answer
     {
-        public string Text { get; }
+        public string Text { get; set; } = "Undefined";
 
-        public bool IsRight { get; }
+        public bool IsRight { get; set; } = false;
+
+        public Answer() { }
 
         public Answer(string text, bool isRigth = false)
         {

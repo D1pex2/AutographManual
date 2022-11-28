@@ -19,5 +19,17 @@ namespace AuthographManual.Tools
                 arr[i] = tmp;
             }
         }
+
+        public static void Shuffle<T>(this List<T> list)
+        {
+            Random rand = new Random();
+            for (int i = list.Count - 1; i >= 1; i--)
+            {
+                int j = rand.Next(i + 1);
+                T tmp = list[j];
+                list[j] = list[i];
+                list[i] = tmp;
+            }
+        }
     }
 }

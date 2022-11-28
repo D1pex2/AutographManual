@@ -20,20 +20,24 @@ namespace AuthographManual.Controls
     /// <summary>
     /// Логика взаимодействия для Test.xaml
     /// </summary>
-    public partial class Test : UserControl
+    public partial class Quest : UserControl
     {
         private Question question;
 
         private List<RadioButton> radioButtons = new List<RadioButton>();
         private List<CheckBox> checkBoxes = new List<CheckBox>();
 
-        public Test()
+        public Quest()
         {
             InitializeComponent();
         }
 
         public void Initialize(Question question)
         {
+            this.question = question;
+            QuestionTextBlock.Text = question.Text;
+            Clear();
+            question.Answers.Shuffle();
             switch (question.Type)
             {
                 case QuestionType.Single:
@@ -50,11 +54,21 @@ namespace AuthographManual.Controls
             }
         }
 
-        public void InitializeSingle(Question question)
+        private void Clear()
         {
-            this.question = question;
-            QuestionTextBlock.Text = question.Text;
-            question.Answers.Shuffle();
+            AnswerTextBox.Visibility = Visibility.Collapsed;
+            foreach (var item in radioButtons)
+            {
+                StackPanel.Children.Remove(item);
+            }
+            foreach (var item in checkBoxes)
+            {
+                StackPanel.Children.Remove(item);
+            }
+        }
+
+        private void InitializeSingle(Question question)
+        {
             foreach (var answer in question.Answers)
             {
                 RadioButton radioButton = new RadioButton();
@@ -66,11 +80,8 @@ namespace AuthographManual.Controls
             }
         }
 
-        public void InitializeMultiple(Question question)
+        private void InitializeMultiple(Question question)
         {
-            this.question = question;
-            QuestionTextBlock.Text = question.Text;
-            question.Answers.Shuffle();
             foreach (var answer in question.Answers)
             {
                 CheckBox checkBox = new CheckBox();
@@ -81,10 +92,8 @@ namespace AuthographManual.Controls
             }
         }
 
-        public void InitializeText(Question question)
+        private void InitializeText(Question question)
         {
-            this.question = question;
-            QuestionTextBlock.Text = question.Text;
             AnswerTextBox.Visibility = Visibility.Visible;
         }
 

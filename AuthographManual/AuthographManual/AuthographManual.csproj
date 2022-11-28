@@ -59,13 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\Test.xaml.cs">
-      <DependentUpon>Test.xaml</DependentUpon>
+    <Compile Include="Controls\Quest.xaml.cs">
+      <DependentUpon>Quest.xaml</DependentUpon>
     </Compile>
     <Compile Include="Data\Answer.cs" />
     <Compile Include="Data\Question.cs" />
+    <Compile Include="Data\Test.cs" />
     <Compile Include="Tools\ArrayHelper.cs" />
-    <Page Include="Controls\Test.xaml">
+    <Compile Include="Tools\XmlHelper.cs" />
+    <Page Include="Controls\Quest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

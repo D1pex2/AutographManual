@@ -6,12 +6,10 @@
       xmlns:local="clr-namespace:AuthographManual.Pages" xmlns:controls="clr-namespace:AuthographManual.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TestPage">
+      Title="TestPage" Loaded="Page_Loaded">
 
     <StackPanel>
-        <controls:Test x:Name="test1"/>
-        <controls:Test x:Name="test2"/>
-        <controls:Test x:Name="test3"/>
-        <Button x:Name="CheckAnswerButton" Content="Проверить ответ" Click="CheckAnswerButton_Click"/>
+        <controls:Quest x:Name="Quest"/>
+        <Button x:Name="AnswerButton" Content="Ответить" Click="AnswerButton_Click" HorizontalAlignment="Left"/>
     </StackPanel>
 </Page>

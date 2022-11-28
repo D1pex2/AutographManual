@@ -1,4 +1,5 @@
 ﻿using AuthographManual.Data;
+using AuthographManual.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,22 +22,36 @@ namespace AuthographManual.Pages
     /// </summary>
     public partial class TestPage : Page
     {
+        private Test test;
+
+        private Question currentQuestion;
+
         public TestPage()
         {
             InitializeComponent();
-            Question question1 = new Question("Выберите А", new Answer[] { new Answer("A", true), new Answer("B"), new Answer("C"), new Answer("D")});
-            Question question2 = new Question("Выберите А и B", new Answer[] { new Answer("A", true), new Answer("B",true), new Answer("C"), new Answer("D")}, QuestionType.Multiple);
-            Question question3 = new Question("Выберите А", new Answer[] {new Answer("А", true)}, QuestionType.Text);
-            test1.Initialize(question1);
-            test2.Initialize(question2);
-            test3.Initialize(question3);
         }
 
-        private void CheckAnswerButton_Click(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(test1.CheckAnswer().ToString());
-            MessageBox.Show(test2.CheckAnswer().ToString());
-            MessageBox.Show(test3.CheckAnswer().ToString());
+            test = new Test("questions.xml");
+            NextQuestion();
+        }
+
+        private void AnswerButton_Click(object sender, RoutedEventArgs e)
+        {
+            test.Score += Quest.CheckAnswer() ? 1 : 0;
+            NextQuestion();
+        }
+
+        private void NextQuestion()
+        {
+            if (test.Questions.Count > 0)
+            {
+                currentQuestion = test.Questions.Pop();
+                Quest.Initialize(currentQuestion);
+                return;
+            }
+            MessageBox.Show($"Вы набрали {test.Score} баллов");
         }
     }
 }
