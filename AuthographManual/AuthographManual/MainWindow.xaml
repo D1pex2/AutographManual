@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AuthographManual"
         mc:Ignorable="d"
         Title="Основы работы в Автограф" Icon="/Resources/icon.ico"
-        MinWidth="900" MinHeight="600">
+        MinWidth="900" MinHeight="600" Width="900" Height="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>

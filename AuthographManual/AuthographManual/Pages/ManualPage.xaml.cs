@@ -24,5 +24,10 @@ namespace AuthographManual.Pages
         {
             InitializeComponent();
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            WebBrowser.Navigate($"{Environment.CurrentDirectory}/Manuals/shortManual.html");
+        }
     }
 }
