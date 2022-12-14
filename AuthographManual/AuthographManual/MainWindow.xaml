@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AuthographManual"
         mc:Ignorable="d"
         Title="Основы работы в Автограф" Icon="/Resources/icon.ico"
-        MinWidth="900" MinHeight="600" Width="900" Height="600">
+        MinWidth="900" MinHeight="600" WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -15,8 +15,10 @@
         <StackPanel>
             <Image Source="/Resources/autographLogo.png" Width="150"/>
             <Button x:Name="ManualButton" Style="{StaticResource PrimaryButton}" Content="Руководство пользователя" Click="ManualButton_Click"/>
-            <Button x:Name="VideoButton" Style="{StaticResource PrimaryButton}" Content="Видеоролик по руководству" Click="VideoButton_Click"/>
-            <Button x:Name="TestButton" Style="{StaticResource PrimaryButton}" Content="Тестирование" Click="TestButton_Click"/>
+            <Label Content="Тестирование" HorizontalAlignment="Center" Style="{StaticResource PrimaryLabel}" Margin="5, 0,5, 0"/>
+            <Button x:Name="TestInterfaceButton" Style="{StaticResource PrimaryButton}" Content="Интерфейс" Click="TestInterfaceButton_Click"/>
+            <Button x:Name="TestWork1Button" Style="{StaticResource PrimaryButton}" Content="Работа в программе ч. 1" Click="TestWork1Button_Click"/>
+            <Button x:Name="TestWork2Button" Style="{StaticResource PrimaryButton}" Content="Работа в программе ч. 2" Click="TestWork2Button_Click"/>
         </StackPanel>
         <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>

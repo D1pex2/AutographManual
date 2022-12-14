@@ -22,36 +22,49 @@ namespace AuthographManual.Pages
     /// </summary>
     public partial class TestPage : Page
     {
-        private Test test;
+        private string testPath;
 
-        private Question currentQuestion;
-
-        public TestPage()
+        public TestPage(string testPath)
         {
             InitializeComponent();
+            this.testPath = testPath;
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private void Quest_QuestEnd(object sender, EventArgs e)
         {
-            test = new Test("questions.xml");
-            NextQuestion();
+            TestStackPanel.Visibility = Visibility.Collapsed;
+            ResultStackPanel.Visibility = Visibility.Visible;
+            GradeLabel.Content = $"Ваша оценка {Quest.Grade}.";
         }
 
         private void AnswerButton_Click(object sender, RoutedEventArgs e)
         {
-            test.Score += Quest.CheckAnswer() ? 1 : 0;
-            NextQuestion();
+            Quest.Answer();
         }
 
-        private void NextQuestion()
+        private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            if (test.Questions.Count > 0)
+            StartTest();
+        }
+
+        private void RestartButton_Click(object sender, RoutedEventArgs e)
+        {
+            StartTest();
+        }
+
+        private void StartTest()
+        {
+            try
             {
-                currentQuestion = test.Questions.Pop();
-                Quest.Initialize(currentQuestion);
-                return;
+                Quest.InitializeTest(new Test(testPath, 10));
+                Quest.QuestEnd += Quest_QuestEnd;
+                StartStackPanel.Visibility = ResultStackPanel.Visibility = Visibility.Collapsed;
+                TestStackPanel.Visibility = Visibility.Visible;
             }
-            MessageBox.Show($"Вы набрали {test.Score} баллов");
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

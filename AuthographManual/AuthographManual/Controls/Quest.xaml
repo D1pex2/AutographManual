@@ -8,6 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel x:Name="StackPanel">
         <TextBlock x:Name="QuestionTextBlock" Text="Text"/>
+        <TextBlock x:Name="ProgressTextBlock" Text="Text"/>
+        <TextBlock x:Name="TimerTextBlock" Text="Time"/>
         <TextBox x:Name="AnswerTextBox" Width="300" HorizontalAlignment="Left"/>
+        <Label x:Name="CheckAnswerLabel"/>
     </StackPanel>
 </UserControl>

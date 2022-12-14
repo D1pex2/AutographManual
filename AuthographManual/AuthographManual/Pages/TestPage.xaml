@@ -6,10 +6,20 @@
       xmlns:local="clr-namespace:AuthographManual.Pages" xmlns:controls="clr-namespace:AuthographManual.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TestPage" Loaded="Page_Loaded">
-
-    <StackPanel>
-        <controls:Quest x:Name="Quest"/>
-        <Button x:Name="AnswerButton" Content="Ответить" Click="AnswerButton_Click" HorizontalAlignment="Left"/>
-    </StackPanel>
+      Title="TestPage">
+    <Grid>
+        <StackPanel x:Name="StartStackPanel" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Для начала тестирования нажмите на кнопку «Начать»." Style="{StaticResource PrimaryLabel}"/>
+            <Button x:Name="StartButton" Content="Начать" Style="{StaticResource PrimaryButton}" Click="StartButton_Click"/>
+        </StackPanel>
+        <StackPanel x:Name="TestStackPanel" Visibility="Collapsed">
+            <controls:Quest x:Name="Quest"/>
+            <Label x:Name="TimerLabel"/>
+            <Button x:Name="AnswerButton" Content="Ответить" Click="AnswerButton_Click" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}"/>
+        </StackPanel>
+        <StackPanel x:Name="ResultStackPanel" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label x:Name="GradeLabel" Style="{StaticResource PrimaryLabel}"/>
+            <Button x:Name="RestartButton" Content="Пройти тест заново" Style="{StaticResource PrimaryButton}" Click="RestartButton_Click"/>
+        </StackPanel>
+    </Grid>
 </Page>

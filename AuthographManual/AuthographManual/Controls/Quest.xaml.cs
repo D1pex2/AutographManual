@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace AuthographManual.Controls
 {
@@ -22,19 +24,67 @@ namespace AuthographManual.Controls
     /// </summary>
     public partial class Quest : UserControl
     {
-        private Question question;
+        private Test test;
+        private Question currentQuestion;
 
         private List<RadioButton> radioButtons = new List<RadioButton>();
         private List<CheckBox> checkBoxes = new List<CheckBox>();
 
+        private DispatcherTimer timer = new DispatcherTimer() { Interval = new TimeSpan(0, 0, 1) };
+
+        private int questionTime;
+        public int QuestionTime
+        {
+            get => questionTime;
+            set
+            {
+                TimerTextBlock.Text = $"Время на вопрос: {value} секунд";
+                questionTime = value;
+            }
+        }
+
+        public int Grade { get => test.Grade; }
+
+        public event EventHandler QuestEnd;
+
         public Quest()
         {
             InitializeComponent();
+            timer.Tick += Timer_Tick;
         }
 
-        public void Initialize(Question question)
+        private void Timer_Tick(object sender, EventArgs e)
         {
-            this.question = question;
+            QuestionTime--;
+            if (QuestionTime <= 0)
+            {
+                timer.Stop();
+                Answer();
+            }
+        }
+
+        public void InitializeTest(Test test)
+        {
+            this.test = test;
+            NextQuestion();
+        }
+
+        private void NextQuestion()
+        {
+            if (test.Questions.Count > 0)
+            {
+                ProgressTextBlock.Text = $"Вопрос {test.QuestionQuantity - test.Questions.Count + 1} из {test.QuestionQuantity}.";
+                currentQuestion = test.Questions.Pop();
+                InitializeQuestion(currentQuestion);
+                return;
+            }
+            timer.Stop();
+            QuestEnd?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void InitializeQuestion(Question question)
+        {
+            currentQuestion = question;
             QuestionTextBlock.Text = question.Text;
             Clear();
             question.Answers.Shuffle();
@@ -52,11 +102,13 @@ namespace AuthographManual.Controls
                 default:
                     break;
             }
+            timer.Start();
         }
 
         private void Clear()
         {
-            AnswerTextBox.Visibility = Visibility.Collapsed;
+            AnswerTextBox.Visibility = CheckAnswerLabel.Visibility = Visibility.Collapsed;
+            AnswerTextBox.Clear();
             foreach (var item in radioButtons)
             {
                 StackPanel.Children.Remove(item);
@@ -69,6 +121,7 @@ namespace AuthographManual.Controls
 
         private void InitializeSingle(Question question)
         {
+            QuestionTime = 30;
             foreach (var answer in question.Answers)
             {
                 RadioButton radioButton = new RadioButton();
@@ -82,6 +135,7 @@ namespace AuthographManual.Controls
 
         private void InitializeMultiple(Question question)
         {
+            QuestionTime = 60;
             foreach (var answer in question.Answers)
             {
                 CheckBox checkBox = new CheckBox();
@@ -94,12 +148,35 @@ namespace AuthographManual.Controls
 
         private void InitializeText(Question question)
         {
+            QuestionTime = 90;
             AnswerTextBox.Visibility = Visibility.Visible;
         }
 
-        public bool CheckAnswer()
+        public void Answer()
         {
-            switch(question.Type)
+            if (CheckAnswerLabel.Visibility == Visibility.Visible)
+            {
+                NextQuestion();
+                return;
+            }
+            var correct = currentQuestion.Answers.Where(a => a.IsRight).Select(a => a.Text).Aggregate((a, b) => $"{a}\n{b}");
+            CheckAnswerLabel.Visibility = Visibility.Visible;
+            if (CheckAnswer())
+            {
+                test.Score++;
+                CheckAnswerLabel.Content = $"Вы ответили верно. Ваш ответ:\n{correct}";
+                CheckAnswerLabel.Background = Brushes.LightGreen;
+            }
+            else
+            {
+                CheckAnswerLabel.Content = $"Вы ответили не верно. Правильный ответ:\n{correct}";
+                CheckAnswerLabel.Background = Brushes.Crimson;
+            }
+        }
+
+        private bool CheckAnswer()
+        {
+            switch(currentQuestion.Type)
             {
                 case QuestionType.Single:
                     foreach (var radioButton in radioButtons)
@@ -120,7 +197,12 @@ namespace AuthographManual.Controls
                     }
                     return true;
                 case QuestionType.Text:
-                    return question.Answers.First(a => a.IsRight).Text.ToLower().Trim() == AnswerTextBox.Text.ToLower().Trim();
+                    var correctAnswer = currentQuestion.Answers.FirstOrDefault(a => a.IsRight);
+                    if (correctAnswer == null)
+                    {
+                        return false;
+                    }
+                    return correctAnswer.Text.ToLower().Trim() == AnswerTextBox.Text.ToLower().Trim();
                 default:
                     return false;
             }

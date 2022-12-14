@@ -25,7 +25,7 @@ namespace AuthographManual
         {
             InitializeComponent();
             Navigate.MainFrame = MainFrame;
-            MainFrame.Navigate(new WelcomePage());
+            MainFrame.Navigate(new ManualPage());
         }
 
         private void ManualButton_Click(object sender, RoutedEventArgs e)
@@ -33,14 +33,19 @@ namespace AuthographManual
             MainFrame.Navigate(new ManualPage());
         }
 
-        private void VideoButton_Click(object sender, RoutedEventArgs e)
+        private void TestInterfaceButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new VideoPage());
+            MainFrame.Navigate(new TestPage("interface.xml"));
         }
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
+        private void TestWork1Button_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new TestPage());
+            MainFrame.Navigate(new TestPage("workInProgram1.xml"));
+        }
+
+        private void TestWork2Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new TestPage("workInProgram2.xml"));
         }
     }
 }
