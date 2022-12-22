@@ -4,20 +4,25 @@
              xmlns:local="clr-namespace:AuthographManual"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="TextBlock">
+        <Style TargetType="TextBlock" x:Key="TextBlockBased">
             <Setter Property="FontFamily" Value="Tahoma"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="21"/>
+            <Setter Property="Margin" Value="4"/>
         </Style>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlockBased}"/>
         <Style TargetType="Control" x:Key="Based">
             <Setter Property="FontFamily" Value="Tahoma"/>
-            <Setter Property="FontSize" Value="14"/>
-            <Setter Property="Margin" Value="3"/>
+            <Setter Property="FontSize" Value="21"/>
+            <Setter Property="Margin" Value="4"/>
         </Style>
         <Style TargetType="Button" BasedOn="{StaticResource Based}"/>
         <Style TargetType="Label" BasedOn="{StaticResource Based}"/>
-        <Style TargetType="CheckBox" BasedOn="{StaticResource Based}"/>
-        <Style TargetType="RadioButton" BasedOn="{StaticResource Based}"/>
+        <Style TargetType="CheckBox" BasedOn="{StaticResource Based}">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="RadioButton" BasedOn="{StaticResource Based}">
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
         <Style TargetType="TextBox" BasedOn="{StaticResource Based}"/>
         <Style x:Key="PrimaryButton" TargetType="Button" BasedOn="{StaticResource Based}">
             <Setter Property="Background" Value="#0096F0"/>
@@ -26,7 +31,12 @@
         <Style TargetType="Label" x:Key="PrimaryLabel" BasedOn="{StaticResource Based}">
             <Setter Property="Foreground" Value="#0096F0"/>
             <Setter Property="FontWeight" Value="DemiBold"/>
-            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="PrimaryTextBlock" BasedOn="{StaticResource TextBlockBased}">
+            <Setter Property="Foreground" Value="#0096F0"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="FontSize" Value="24"/>
         </Style>
     </Application.Resources>
 </Application>

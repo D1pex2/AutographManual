@@ -24,22 +24,21 @@ namespace AuthographManual.Pages
     {
         private string testPath;
 
-        public TestPage(string testPath)
+        public TestPage(string testPath, string testName = "")
         {
             InitializeComponent();
             this.testPath = testPath;
+            if (!String.IsNullOrWhiteSpace(testName))
+            {
+                TestTitleTextBlock.Text = $"Для начала тестирования по теме \"{testName}\" нажмите на кнопку «Начать».";
+            }
         }
 
         private void Quest_QuestEnd(object sender, EventArgs e)
         {
             TestStackPanel.Visibility = Visibility.Collapsed;
             ResultStackPanel.Visibility = Visibility.Visible;
-            GradeLabel.Content = $"Ваша оценка {Quest.Grade}.";
-        }
-
-        private void AnswerButton_Click(object sender, RoutedEventArgs e)
-        {
-            Quest.Answer();
+            GradeTextBlock.Text = $"Ваша оценка {Quest.Grade}.";
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)

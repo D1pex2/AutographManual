@@ -96,7 +96,6 @@
     <Compile Include="Pages\ManualPage.xaml.cs">
       <DependentUpon>ManualPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Navigate.cs" />
     <Compile Include="Pages\TestPage.xaml.cs">
       <DependentUpon>TestPage.xaml</DependentUpon>
     </Compile>

@@ -43,6 +43,11 @@ namespace AuthographManual.Controls
             }
         }
 
+        private bool AnswerSelected
+        {
+            get => radioButtons.Any(r => r.IsChecked == true) || checkBoxes.Any(c => c.IsChecked == true) || !String.IsNullOrWhiteSpace(AnswerTextBox.Text);
+        }
+
         public int Grade { get => test.Grade; }
 
         public event EventHandler QuestEnd;
@@ -66,6 +71,7 @@ namespace AuthographManual.Controls
         public void InitializeTest(Test test)
         {
             this.test = test;
+            Clear();
             NextQuestion();
         }
 
@@ -73,12 +79,12 @@ namespace AuthographManual.Controls
         {
             if (test.Questions.Count > 0)
             {
+                AnswerButton.Content = "Ответить";
                 ProgressTextBlock.Text = $"Вопрос {test.QuestionQuantity - test.Questions.Count + 1} из {test.QuestionQuantity}.";
                 currentQuestion = test.Questions.Pop();
                 InitializeQuestion(currentQuestion);
                 return;
             }
-            timer.Stop();
             QuestEnd?.Invoke(this, EventArgs.Empty);
         }
 
@@ -107,21 +113,24 @@ namespace AuthographManual.Controls
 
         private void Clear()
         {
-            AnswerTextBox.Visibility = CheckAnswerLabel.Visibility = Visibility.Collapsed;
-            AnswerTextBox.Clear();
             foreach (var item in radioButtons)
             {
-                StackPanel.Children.Remove(item);
+                AnswerStackPanel.Children.Remove(item);
             }
             foreach (var item in checkBoxes)
             {
-                StackPanel.Children.Remove(item);
+                AnswerStackPanel.Children.Remove(item);
             }
+            AnswerTextBox.Visibility = CheckAnswerLabel.Visibility = EmptyAnswerLabel.Visibility = AnswerStackPanel.Visibility = Visibility.Collapsed;
+            AnswerTextBox.Clear();
+            radioButtons.Clear();
+            checkBoxes.Clear();
         }
 
         private void InitializeSingle(Question question)
         {
             QuestionTime = 30;
+            AnswerStackPanel.Visibility = Visibility.Visible;
             foreach (var answer in question.Answers)
             {
                 RadioButton radioButton = new RadioButton();
@@ -129,20 +138,21 @@ namespace AuthographManual.Controls
                 radioButton.Tag = answer.IsRight;
                 radioButton.GroupName = "Answers";
                 radioButtons.Add(radioButton);
-                StackPanel.Children.Add(radioButton);
+                AnswerStackPanel.Children.Add(radioButton);
             }
         }
 
         private void InitializeMultiple(Question question)
         {
             QuestionTime = 60;
+            AnswerStackPanel.Visibility = Visibility.Visible;
             foreach (var answer in question.Answers)
             {
                 CheckBox checkBox = new CheckBox();
                 checkBox.Content = answer.Text;
                 checkBox.Tag = answer.IsRight;
                 checkBoxes.Add(checkBox);
-                StackPanel.Children.Add(checkBox);
+                AnswerStackPanel.Children.Add(checkBox);
             }
         }
 
@@ -154,6 +164,8 @@ namespace AuthographManual.Controls
 
         public void Answer()
         {
+            timer.Stop();
+            AnswerButton.Content = "Далее";
             if (CheckAnswerLabel.Visibility == Visibility.Visible)
             {
                 NextQuestion();
@@ -197,15 +209,32 @@ namespace AuthographManual.Controls
                     }
                     return true;
                 case QuestionType.Text:
-                    var correctAnswer = currentQuestion.Answers.FirstOrDefault(a => a.IsRight);
-                    if (correctAnswer == null)
+                    var correctAnswers = currentQuestion.Answers.Where(a => a.IsRight);
+                    if (correctAnswers == null || correctAnswers.Count() == 0)
                     {
                         return false;
                     }
-                    return correctAnswer.Text.ToLower().Trim() == AnswerTextBox.Text.ToLower().Trim();
+                    foreach (var answer in correctAnswers)
+                    {
+                        if (answer.Text.ToLower().Trim() == AnswerTextBox.Text.ToLower().Trim())
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
                 default:
                     return false;
             }
+        }
+
+        private void AnswerButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!AnswerSelected && questionTime > 0)
+            {
+                EmptyAnswerLabel.Visibility = Visibility.Visible;
+                return;
+            }
+            Answer();
         }
     }
 }

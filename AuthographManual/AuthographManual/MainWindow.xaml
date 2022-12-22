@@ -7,18 +7,23 @@
         mc:Ignorable="d"
         Title="Основы работы в Автограф" Icon="/Resources/icon.ico"
         MinWidth="900" MinHeight="600" WindowState="Maximized">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="MenuButton" BasedOn="{StaticResource PrimaryButton}">
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Image Source="/Resources/autographLogo.png" Width="150"/>
-            <Button x:Name="ManualButton" Style="{StaticResource PrimaryButton}" Content="Руководство пользователя" Click="ManualButton_Click"/>
-            <Label Content="Тестирование" HorizontalAlignment="Center" Style="{StaticResource PrimaryLabel}" Margin="5, 0,5, 0"/>
-            <Button x:Name="TestInterfaceButton" Style="{StaticResource PrimaryButton}" Content="Интерфейс" Click="TestInterfaceButton_Click"/>
-            <Button x:Name="TestWork1Button" Style="{StaticResource PrimaryButton}" Content="Работа в программе ч. 1" Click="TestWork1Button_Click"/>
-            <Button x:Name="TestWork2Button" Style="{StaticResource PrimaryButton}" Content="Работа в программе ч. 2" Click="TestWork2Button_Click"/>
+            <Image Source="/Resources/autographLogo.png" Width="200"/>
+            <Button x:Name="ManualButton" Style="{StaticResource MenuButton}" Content="Руководство пользователя" Click="ManualButton_Click"/>
+            <Label Content="Тестирование" HorizontalAlignment="Center" Style="{StaticResource PrimaryLabel}" Margin="5, 0, 5, 0"/>
+            <Button x:Name="TestInterfaceButton" Style="{StaticResource MenuButton}" Content="Интерфейс" Click="TestInterfaceButton_Click"/>
+            <Button x:Name="TestWork1Button" Style="{StaticResource MenuButton}" Content="Работа в программе ч. 1" Click="TestWork1Button_Click"/>
+            <Button x:Name="TestWork2Button" Style="{StaticResource MenuButton}" Content="Работа в программе ч. 2" Click="TestWork2Button_Click"/>
         </StackPanel>
         <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
     </Grid>

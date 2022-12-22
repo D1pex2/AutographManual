@@ -23,8 +23,7 @@ namespace AuthographManual
     {
         public MainWindow()
         {
-            InitializeComponent();
-            Navigate.MainFrame = MainFrame;
+            InitializeComponent();      
             MainFrame.Navigate(new ManualPage());
         }
 
@@ -35,17 +34,17 @@ namespace AuthographManual
 
         private void TestInterfaceButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new TestPage("interface.xml"));
+            MainFrame.Navigate(new TestPage("interface.xml", "Интерфейс"));
         }
 
         private void TestWork1Button_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new TestPage("workInProgram1.xml"));
+            MainFrame.Navigate(new TestPage("workInProgram1.xml", "Работа в программе ч. 1"));
         }
 
         private void TestWork2Button_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new TestPage("workInProgram2.xml"));
+            MainFrame.Navigate(new TestPage("workInProgram2.xml", "Работа в программе ч. 2"));
         }
     }
 }

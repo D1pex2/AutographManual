@@ -7,18 +7,25 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TestPage">
+    <Page.Resources>
+        <Style TargetType="StackPanel">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Background" Value="#E0FFFF"/>
+            <Setter Property="MinHeight" Value="90"/>
+            <Setter Property="MinWidth" Value="300"/>
+        </Style>
+    </Page.Resources>
     <Grid>
-        <StackPanel x:Name="StartStackPanel" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Label Content="Для начала тестирования нажмите на кнопку «Начать»." Style="{StaticResource PrimaryLabel}"/>
+        <StackPanel x:Name="StartStackPanel">
+            <TextBlock x:Name="TestTitleTextBlock" Text ="Для начала тестирования нажмите на кнопку «Начать»." Style="{StaticResource PrimaryTextBlock}" TextWrapping="Wrap"/>
             <Button x:Name="StartButton" Content="Начать" Style="{StaticResource PrimaryButton}" Click="StartButton_Click"/>
         </StackPanel>
         <StackPanel x:Name="TestStackPanel" Visibility="Collapsed">
             <controls:Quest x:Name="Quest"/>
-            <Label x:Name="TimerLabel"/>
-            <Button x:Name="AnswerButton" Content="Ответить" Click="AnswerButton_Click" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}"/>
         </StackPanel>
-        <StackPanel x:Name="ResultStackPanel" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Label x:Name="GradeLabel" Style="{StaticResource PrimaryLabel}"/>
+        <StackPanel x:Name="ResultStackPanel" Visibility="Collapsed">
+            <TextBlock x:Name="GradeTextBlock" Style="{StaticResource TextBlockBased}"/>
             <Button x:Name="RestartButton" Content="Пройти тест заново" Style="{StaticResource PrimaryButton}" Click="RestartButton_Click"/>
         </StackPanel>
     </Grid>

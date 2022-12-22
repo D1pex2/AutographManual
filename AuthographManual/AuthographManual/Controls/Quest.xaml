@@ -6,11 +6,14 @@
              xmlns:local="clr-namespace:AuthographManual"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <StackPanel x:Name="StackPanel">
-        <TextBlock x:Name="QuestionTextBlock" Text="Text"/>
+    <StackPanel>
+        <TextBlock x:Name="QuestionTextBlock" Text="Text" TextWrapping="Wrap" Style="{StaticResource PrimaryTextBlock}"/>
         <TextBlock x:Name="ProgressTextBlock" Text="Text"/>
         <TextBlock x:Name="TimerTextBlock" Text="Time"/>
+        <Label x:Name="CheckAnswerLabel" Visibility="Collapsed"/>
+        <Label x:Name="EmptyAnswerLabel" Visibility="Collapsed" Content="Пожалуйста, ответьте на вопрос" Background="#FFFF66"/>
+        <StackPanel x:Name="AnswerStackPanel" HorizontalAlignment="Left"/>
         <TextBox x:Name="AnswerTextBox" Width="300" HorizontalAlignment="Left"/>
-        <Label x:Name="CheckAnswerLabel"/>
+        <Button x:Name="AnswerButton" Content="Ответить" Click="AnswerButton_Click" HorizontalAlignment="Left" Style="{StaticResource PrimaryButton}"/>
     </StackPanel>
 </UserControl>
