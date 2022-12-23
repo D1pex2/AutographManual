@@ -27,3 +27,5 @@ C:\Users\kirill\Documents\GitHub\AuthographManual\AuthographManual\AuthographMan
 C:\Users\kirill\Documents\GitHub\AuthographManual\AuthographManual\AuthographManual\obj\Debug\AuthographManual.exe
 C:\Users\kirill\Documents\GitHub\AuthographManual\AuthographManual\AuthographManual\obj\Debug\AuthographManual.pdb
 C:\Users\kirill\Documents\GitHub\AuthographManual\AuthographManual\AuthographManual\obj\Debug\AuthographManual.csproj.AssemblyReference.cache
+C:\Users\kirill\Documents\GitHub\AuthographManual\AuthographManual\AuthographManual\obj\Debug\Pages\HelpPage.g.cs
+C:\Users\kirill\Documents\GitHub\AuthographManual\AuthographManual\AuthographManual\obj\Debug\Pages\HelpPage.baml

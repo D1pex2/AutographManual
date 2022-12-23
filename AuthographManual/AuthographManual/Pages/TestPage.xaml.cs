@@ -30,7 +30,7 @@ namespace AuthographManual.Pages
             this.testPath = testPath;
             if (!String.IsNullOrWhiteSpace(testName))
             {
-                TestTitleTextBlock.Text = $"Для начала тестирования по теме \"{testName}\" нажмите на кнопку «Начать».";
+                TestTitleTextBlock.Text = $"Для начала тестирования по теме \"{testName}\" нажмите на кнопку «Начать»";
             }
         }
 

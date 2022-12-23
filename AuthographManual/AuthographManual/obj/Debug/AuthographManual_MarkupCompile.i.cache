@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\kirill\Documents\GitHub\AuthographManual\AuthographManual\AuthographManual\App.xaml
-4490822925
+5952305403
 4-364092617
-141717073230
+15-655888972
 14209946504
-Controls\Quest.xaml;MainWindow.xaml;Pages\ManualPage.xaml;Pages\TestPage.xaml;
+Controls\Quest.xaml;MainWindow.xaml;Pages\HelpPage.xaml;Pages\ManualPage.xaml;Pages\TestPage.xaml;
 
-False
+True
 

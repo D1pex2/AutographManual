@@ -18,7 +18,7 @@
     </Page.Resources>
     <Grid>
         <StackPanel x:Name="StartStackPanel">
-            <TextBlock x:Name="TestTitleTextBlock" Text ="Для начала тестирования нажмите на кнопку «Начать»." Style="{StaticResource PrimaryTextBlock}" TextWrapping="Wrap"/>
+            <TextBlock x:Name="TestTitleTextBlock" Text ="Для начала тестирования нажмите на кнопку «Начать»" Style="{StaticResource PrimaryTextBlock}" TextWrapping="Wrap"/>
             <Button x:Name="StartButton" Content="Начать" Style="{StaticResource PrimaryButton}" Click="StartButton_Click"/>
         </StackPanel>
         <StackPanel x:Name="TestStackPanel" Visibility="Collapsed">

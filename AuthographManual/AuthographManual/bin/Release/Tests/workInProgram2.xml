@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <Text>Что произойдет с текстом фигуры если повернуть фигуру на 90 градусов?</Text>
+    <Answers>
+      <Answer>
+        <Text>Он останется в прежнем положении</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Он повернется вместе с фигурой на 90 градусов</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Он повернется вместе с фигурой на 180 градусов</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Он будет утерян</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Какой функционал имеют стрелки у фигуры если ее выделить?</Text>
+    <Answers>
+      <Answer>
+        <Text>Провести соединительную линию</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Передвинуть фигуру по направлению стрелки</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Увеличить фигуру по направлению стрелки</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Создать стрелку</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Какую комбинацию клавиш имеет функция поворота фигуры на 90 градусов?</Text>
+    <Answers>
+      <Answer>
+        <Text>Alt+R</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ctrl+R</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ctrl+L</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Alt+L</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Какую комбинацию клавиш имеет функция переноса фигуры на передний план?</Text>
+    <Answers>
+      <Answer>
+        <Text>Ctrl+Shift+F</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ctrl+Shift+B</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ctrl+Alt+F</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ctrl+Alt+B</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Какую комбинацию клавиш имеет функция переноса фигуры на задний план?</Text>
+    <Answers>
+      <Answer>
+        <Text>Ctrl+Shift+F</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ctrl+Shift+B</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ctrl+Alt+F</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ctrl+Alt+B</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Каким образом можно создать соединительную линию?</Text>
+    <Answers>
+      <Answer>
+        <Text>Нажать на стрелку у выделенной фигуры</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Перетащить из общей библиотеки элементов</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Выделить два объекта и нажать на кнопку создать соединительную линию</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Провести курсором от одного объекта к другому</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Что можно добавить в библиотеку избранных элементов?</Text>
+    <Answers>
+      <Answer>
+        <Text>Объект</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Группу объектов</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Схему</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Стиль</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие функции доступны в панели "Диаграмма"?</Text>
+    <Answers>
+      <Answer>
+        <Text>Цвет</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Стиль сетки</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Фон страницы</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Заливка</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие существуют способы редактирования стилей объектов?</Text>
+    <Answers>
+      <Answer>
+        <Text>Панель инструментов</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Панель форматирования</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Библиотека элементов</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Вид</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие инструменты упрощения работы можно применить для страницы документа?</Text>
+    <Answers>
+      <Answer>
+        <Text>Сетка</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Линейка</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Направляющие</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Линия</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Что становится видно у каждой фигуры если ее выделить?</Text>
+    <Answers>
+	  <Answer>
+        <Text>Точки соединения</Text>
+        <IsRight>true</IsRight>
+	  </Answer>
+	  <Answer>
+        <Text>Точки привязки</Text>
+        <IsRight>true</IsRight>
+	  </Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется функция конвертирования схемы в форматы PNG, JPEG, SVG, PDF, VSDX?</Text>
+    <Answers>
+		<Answer>
+        <Text>Экспорт</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется функция открытия последних используемых документов в программе?</Text>
+    <Answers>
+	<Answer>
+        <Text>Открыть недавние</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+<Question>
+    <Text>Какое расширение имеет схема по умолчанию?</Text>
+    <Answers>
+	<Answer>
+        <Text>autograph</Text>
+        <Text>.autograph</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется объект для размещения текста?</Text>
+    <Answers>
+	<Answer>
+        <Text>Текстовый блок</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+</ArrayOfQuestion>

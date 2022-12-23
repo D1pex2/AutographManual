@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthographManual", "AuthographManual\AuthographManual.csproj", "{94719F4D-F987-44E9-848D-2B71341906BD}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "AuthographManualSetup", "AuthographManualSetup\AuthographManualSetup.vdproj", "{D38BD96E-C796-4087-BDF0-7FDBB6F679D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{94719F4D-F987-44E9-848D-2B71341906BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94719F4D-F987-44E9-848D-2B71341906BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94719F4D-F987-44E9-848D-2B71341906BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D38BD96E-C796-4087-BDF0-7FDBB6F679D9}.Debug|Any CPU.ActiveCfg = Debug
+		{D38BD96E-C796-4087-BDF0-7FDBB6F679D9}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <Text>Какой раздел отсутствует в главном меню?</Text>
+    <Answers>
+      <Answer>
+        <Text>Диаграмма</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Файл</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Правка</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Объект</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Выберите описание раздела "Файл"?</Text>
+    <Answers>
+      <Answer>
+        <Text>Набор функций по работе с файлом</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор стандартных функций по выбору и изменению параметров объекта</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для редактирования объектов и групп объектов</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для изменения параметров интерфейса</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Выберите описание раздела "Правка"?</Text>
+    <Answers>
+      <Answer>
+        <Text>Набор функций по работе с файлом</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор стандартных функций по выбору и изменению параметров объекта</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для редактирования объектов и групп объектов</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для изменения параметров интерфейса</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Выберите описание раздела "Объект"?</Text>
+    <Answers>
+      <Answer>
+        <Text>Набор функций по работе с файлом</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор стандартных функций по выбору и изменению параметров объекта</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для редактирования объектов и групп объектов</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для изменения параметров интерфейса</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Выберите описание раздела "Вид"?</Text>
+    <Answers>
+      <Answer>
+        <Text>Набор функций по работе с файлом</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор стандартных функций по выбору иизменению параметров объекта</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для редактирования объектов и групп объектов</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для изменения параметров интерфейса</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Какие из ниже перечисленных разделов находятся в главном меню?</Text>
+    <Answers>
+      <Answer>
+        <Text>Файл</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Объект</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Диаграмма</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Стиль</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие действия предложены при запуске программы?</Text>
+    <Answers>
+      <Answer>
+        <Text>Создать новую схему</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Открыть существующую диаграмму</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Удалить существующую схему</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Создать новую фигуру</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие из ниже перечисленных функций представлены в панели инструментов?</Text>
+    <Answers>
+      <Answer>
+        <Text>Масштаб</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Таблица</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Сетка</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Линейка</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие из ниже перечисленных функций представлены в панели инструментов?</Text>
+    <Answers>
+      <Answer>
+        <Text>Увеличить/уменьшить</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Удалить</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Добавить фигуру</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Вырезать</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие из ниже перечисленных разделов находятся в меню библиотек?</Text>
+    <Answers>
+      <Answer>
+        <Text>Поиск фигур</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Избранные элементы</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Панель выбора библиотек</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Диаграмма</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Сколько всего разделов в главном меню?</Text>
+    <Answers>
+	  <Answer>
+        <Text>4</Text>
+        <IsRight>true</IsRight>
+	  </Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется элемент интерфейса, который содержит следующие функции: масштаб, увеличить/уменьшить, отменить/вернуть, удалить, на передний план/на задний план, цвет заливки?</Text>
+    <Answers>
+		<Answer>
+        <Text>Панель инструментов</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется элемент интерфейса, который представляет собой набор функций для быстрого редактирования чертежа?</Text>
+    <Answers>
+	<Answer>
+        <Text>Панель форматирования</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется элемент интерфейса, который является основным пространством для работы в программе?</Text>
+    <Answers>
+	<Answer>
+        <Text>Рабочая страница</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется элемент интерфейса, который содержит фигуры?</Text>
+    <Answers>
+	<Answer>
+        <Text>Меню библиотек</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+</ArrayOfQuestion>

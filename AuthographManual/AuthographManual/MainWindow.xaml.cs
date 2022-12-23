@@ -46,5 +46,10 @@ namespace AuthographManual
         {
             MainFrame.Navigate(new TestPage("workInProgram2.xml", "Работа в программе ч. 2"));
         }
+
+        private void HelpButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new HelpPage());
+        }
     }
 }

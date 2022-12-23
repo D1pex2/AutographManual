@@ -19,12 +19,13 @@
         </Grid.ColumnDefinitions>
         <StackPanel>
             <Image Source="/Resources/autographLogo.png" Width="200"/>
-            <Button x:Name="ManualButton" Style="{StaticResource MenuButton}" Content="Руководство пользователя" Click="ManualButton_Click"/>
+            <Button x:Name="ManualButton" Style="{StaticResource MenuButton}" Content="Теоретический материал" Click="ManualButton_Click"/>
+            <Button x:Name="HelpButton" Style="{StaticResource MenuButton}" Content="О программе" Click="HelpButton_Click"/>
             <Label Content="Тестирование" HorizontalAlignment="Center" Style="{StaticResource PrimaryLabel}" Margin="5, 0, 5, 0"/>
             <Button x:Name="TestInterfaceButton" Style="{StaticResource MenuButton}" Content="Интерфейс" Click="TestInterfaceButton_Click"/>
             <Button x:Name="TestWork1Button" Style="{StaticResource MenuButton}" Content="Работа в программе ч. 1" Click="TestWork1Button_Click"/>
             <Button x:Name="TestWork2Button" Style="{StaticResource MenuButton}" Content="Работа в программе ч. 2" Click="TestWork2Button_Click"/>
         </StackPanel>
-        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden" Background="#E0FFFF"/>
     </Grid>
 </Window>
