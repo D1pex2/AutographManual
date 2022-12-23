@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <Text>Какая фунция по работе с файлами открывает новое окно программы?</Text>
+    <Answers>
+      <Answer>
+        <Text>Создать</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Открыть</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Импорт</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Экспорт</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Как называется функция конвертирования файлов  в следующие форматы: PNG, JPEG, SVG, PDF, VSDX?</Text>
+    <Answers>
+      <Answer>
+        <Text>Экспорт</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Импорт</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Сохранить</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Создать</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Какой объект будет форматироваться при отсутствии выделенного объекта?</Text>
+    <Answers>
+      <Answer>
+        <Text>Последний выделенный объект</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Вся схема</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Ничего</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Панель форматирования будет недоступна</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Какие функции содержит панель "Диаграмма"?</Text>
+    <Answers>
+      <Answer>
+        <Text>Функции, отвечающие непосредственно за внешний вид рабочего листа, такие как цвет и стиль сетки, фон страницы и пр.</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор стандартных функций по выбору и изменению параметров объекта</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для редактирования объектов и групп объектов</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Набор функций для изменения параметров интерфейса</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>На какой панели представлена функция перемещения объекта на задний и передний план?</Text>
+    <Answers>
+      <Answer>
+        <Text>Меню библиотек</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Главное меню</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Страница документа</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Панель инструментов</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Single</Type>
+  </Question>
+  <Question>
+    <Text>Какие функции позволяют сохранить схему?</Text>
+    <Answers>
+      <Answer>
+        <Text>Сохранить</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Сохранить как</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Экспорт</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Импорт</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие расширения схем доступны для импорта?</Text>
+    <Answers>
+      <Answer>
+        <Text>VSDX</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>autograph</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>drawio</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>JPG</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какими функциями можно добавить объект?</Text>
+    <Answers>
+      <Answer>
+        <Text>Drag and drop (перетаскивание)</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Вставить сюда</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Двойное нажатие</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Добавить объект</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие варианты размещения текста существуют?</Text>
+    <Answers>
+      <Answer>
+        <Text>Текстовый блок</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Текст внутри объекта</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Метка</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>Вставить текст</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какие расширения библиотек доступны для импорта?</Text>
+    <Answers>
+      <Answer>
+        <Text>VSS</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>XML</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>XLSX</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+	  <Answer>
+        <Text>EXE</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <Type>Multiple</Type>
+  </Question>
+  <Question>
+    <Text>Какое расширение имеет файл схемы?</Text>
+    <Answers>
+	  <Answer>
+        <Text>autograph</Text>
+        <IsRight>true</IsRight>
+	  </Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется функция конвертирования схемы из другого приложения в текущую схему?</Text>
+    <Answers>
+		<Answer>
+        <Text>Импорт</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Как называется функция открытия последних используемых документов в программе?</Text>
+    <Answers>
+	<Answer>
+        <Text>Открыть недавние</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+<Question>
+    <Text>В каком разделе можно задать положение объекта?</Text>
+    <Answers>
+	<Answer>
+        <Text>Объект</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+  <Question>
+    <Text>Какая единица измерения размеров используется по умолчанию?</Text>
+    <Answers>
+	<Answer>
+        <Text>Пункт</Text>
+        <IsRight>true</IsRight>
+		</Answer>
+    </Answers>
+    <Type>Text</Type>
+  </Question>
+</ArrayOfQuestion>
