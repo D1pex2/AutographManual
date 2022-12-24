@@ -51,6 +51,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B8E0F8D91A1E4D008676EE935C723D2E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C2FAD4905E3C40B7B05B01647435319D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -75,12 +81,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_F79E002EC64F47A4862E596F15EA3FDC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FE4FA02597BF412883E18308A1B45CBD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -88,7 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F79E002EC64F47A4862E596F15EA3FDC"
+        "OwnerKey" = "8:_B8E0F8D91A1E4D008676EE935C723D2E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -109,6 +109,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -125,6 +133,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -274,6 +290,37 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B8E0F8D91A1E4D008676EE935C723D2E"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:AuthographManual, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_B8E0F8D91A1E4D008676EE935C723D2E"
+                    {
+                    "Name" = "8:AuthographManual.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\AuthographManual\\bin\\Release\\AuthographManual.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_FFC4C9A51E7E494E81313F9F2AB8BE68"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C2FAD4905E3C40B7B05B01647435319D"
             {
             "SourcePath" = "8:..\\AuthographManual\\bin\\Release\\AuthographManual.pdb"
@@ -340,37 +387,6 @@
             "TargetName" = "8:questionmark.png"
             "Tag" = "8:"
             "Folder" = "8:_4E2A468980984BF8BBDA7F51380CB11C"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F79E002EC64F47A4862E596F15EA3FDC"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:AuthographManual, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_F79E002EC64F47A4862E596F15EA3FDC"
-                    {
-                    "Name" = "8:AuthographManual.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\AuthographManual\\bin\\Release\\AuthographManual.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_FFC4C9A51E7E494E81313F9F2AB8BE68"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -615,7 +631,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C0ED5C8C03C243E39C76696EDFEBAF4C"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0AECF621FFE242BBB682656CD536AA38"
             {
             "Name" = "8:Обучающая программа «Основы работы в программном обеспечении Автограф»"
             "Arguments" = "8:"
@@ -623,13 +639,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_F79E002EC64F47A4862E596F15EA3FDC"
+            "Target" = "8:_B8E0F8D91A1E4D008676EE935C723D2E"
             "Folder" = "8:_44FD7F5A3969476DBC877A1015EB9FB5"
             "WorkingFolder" = "8:_FFC4C9A51E7E494E81313F9F2AB8BE68"
-            "Icon" = "8:_C3B3052F30954518AC5AF450C5DF87AC"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E972CDFADA6545CC8A8CE254E279CFFA"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F13FC3574B184391A90416B32B84D4A1"
             {
             "Name" = "8:Обучающая программа «Основы работы в программном обеспечении Автограф»"
             "Arguments" = "8:"
@@ -637,10 +653,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_F79E002EC64F47A4862E596F15EA3FDC"
+            "Target" = "8:_B8E0F8D91A1E4D008676EE935C723D2E"
             "Folder" = "8:_1C03B088378B4C3BA15A681B17F708A0"
             "WorkingFolder" = "8:_FFC4C9A51E7E494E81313F9F2AB8BE68"
-            "Icon" = "8:_C3B3052F30954518AC5AF450C5DF87AC"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }

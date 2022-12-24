@@ -20,6 +20,18 @@
         <StackPanel x:Name="StartStackPanel">
             <TextBlock x:Name="TestTitleTextBlock" Text ="Для начала тестирования нажмите на кнопку «Начать»" Style="{StaticResource PrimaryTextBlock}" TextWrapping="Wrap"/>
             <Button x:Name="StartButton" Content="Начать" Style="{StaticResource PrimaryButton}" Click="StartButton_Click"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Cистема оценивания:&#10;85% правильных ответов - оценка 5
+                       &#10;75% правильных ответов - оценка 4
+                       &#10;60% правильных ответов - оценка 3&#10;" TextWrapping="Wrap"/>
+                <TextBlock Grid.Column="1" Text="Время на ответ:&#10;Вопрос с одним ответом - 30 сек.
+                           &#10;Вопрос с несколькими ответами - 60 сек.
+                           &#10;Вопрос с открытым ответом - 90 сек." TextWrapping="Wrap"/>
+            </Grid>
         </StackPanel>
         <StackPanel x:Name="TestStackPanel" Visibility="Collapsed">
             <controls:Quest x:Name="Quest"/>
